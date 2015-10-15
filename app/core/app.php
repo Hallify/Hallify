@@ -114,6 +114,8 @@
     			 * @todo Display an error page
     			 **/
     			echo "Controller not found!";
+
+                echo APP_FOLDER_PATH . "controllers/" . $this->controller_name;
     		}
 
             $this->debug();
