@@ -50,8 +50,11 @@
     		// load the default controller
     		if (!$this->controller_name) {
 
+                // set the controller name
+                $this->controller_name = "Home";
+
     			// create and store the default controller namespace
-    			$this->controller_namespace = "\\Hallify\\Controllers\\Home";
+    			$this->controller_namespace = "\\Hallify\\Controllers\\{$this->controller_name}";
 
     			// instantiate the default controller
     			$this->controller = new $this->controller_namespace;
@@ -112,7 +115,9 @@
     			 **/
     			echo "Controller not found!";
     		}
-    		
+
+            $this->debug();
+
     	}
 
 
@@ -147,4 +152,21 @@
     			$this->params = array_values($url);
     		}
     	}
+
+
+        /**
+         * (Debug Method) Display the contents of the URL
+         * Controller, Action/Method and Parameters
+         **/
+        public function debug()
+        {
+            // only output the debug 
+            // log if Hallify is in development mode
+            if (ENVIRONMENT === "development" || ENVIRONMENT === "dev") {
+
+                echo 'Controller -> ' . $this->controller_name . '<br/>';
+                echo 'Action/Method -> ' . $this->action . '<br/>';
+                echo 'Parameters -> ' . print_r($this->params, 1) . '<br/>';
+            }
+        }
     }
