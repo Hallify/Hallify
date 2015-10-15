@@ -14,7 +14,7 @@
     define("ROOT_PATH", dirname(__DIR__) . DIRECTORY_SEPARATOR);
 
     // constant that contains Hallify's "app" folder path
-    define("APP_FOLDER_PATH", ROOT_PATH . "app" . DIRECTORY_SEPARATOR);
+    define("APP_FOLDER_PATH", ROOT_PATH . DIRECTORY_SEPARATOR);
 
     // load Hallify's configuration
     require_once APP_FOLDER_PATH . "config/config.php";
