@@ -62,7 +62,7 @@
     			// call the defaut action/method
     			$this->controller->index();
 
-    		} elseif (is_readable(APP_FOLDER_PATH . "controllers/" . $this->controller_name . ".php")) {
+    		} elseif (class_exists("\\Hallify\\Controllers\\{$this->controller_name}")) {
 
     			// instantiate the controller
     			$this->controller = new $this->controller_namespace;
@@ -114,8 +114,6 @@
     			 * @todo Display an error page
     			 **/
     			echo "Controller not found!";
-
-                echo APP_FOLDER_PATH . "controllers/" . $this->controller_name;
     		}
 
             $this->debug();
