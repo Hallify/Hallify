@@ -1,0 +1,19 @@
+{
+  "name" : "Hallify",
+  "version" : "0.0.1",
+  "authors" : [
+               "Bryan Heredia"
+              ],
+  "dependencies" : {
+    "jquery" : "latest",
+    "bootstrap" : "latest",
+    "ionicons" : "latest",
+    "angular" : "latest",
+    "jquery-form" : "latest",
+    "geolocator" : "latest",
+    "FitText.js" : "latest",
+    "animate.css" : "latest",
+    "simple-text-rotator" : "latest"
+  },
+  "private" : true
+}

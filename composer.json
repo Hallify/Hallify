@@ -1,0 +1,14 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"Hallify\\" : "app/"
+		}
+	},
+	"require" : {
+		"php" : ">=5.5.27",
+		"parse/php-sdk" : "1.1.*",
+		"filipac/ip": "~1.0",
+		"piwik/device-detector" : "3.4.2"
+	}
+}
+
